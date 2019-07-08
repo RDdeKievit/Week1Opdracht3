@@ -1,0 +1,26 @@
+<script>
+	var boodschappen= []
+	
+	function toevoegen(){
+		var ingredient= document.getElementById("tekstveld1").value;
+		var hoeveelheid= document.getElementById("tekstveld2").value;
+		var boodschappenlijstDiv = document.getElementById("boodschappenlijst");
+
+		boodschappen.push(ingredient + "		" + hoeveelheid + "<br>");
+		boodschappenlijstDiv.innerHTML = boodschappen;
+
+		for (var i = 0; i < boodschappen.length; i++) {
+            boodschappenlijstDiv = boodschappen.concat(boodschappen);
+            console.log(boodschappen);
+		}
+	}
+</script>
+<style>
+
+</style>
+Ingredient toevoegen<br><br>
+<input type=text id=tekstveld1>
+<input type=text id=tekstveld2>
+<input type=button onclick="toevoegen()" value="Voeg toe"><br><br>
+Boodschappenlijst:<br><br>
+<div id=boodschappenlijst></div>
